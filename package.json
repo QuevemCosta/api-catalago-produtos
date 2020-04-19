@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "api de prova de conceito para painel adiministrativo de cadastro de produtos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "author": "Quevem Costa da Cruz",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.0.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.15",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
