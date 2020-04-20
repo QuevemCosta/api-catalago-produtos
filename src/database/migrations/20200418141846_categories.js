@@ -5,11 +5,6 @@ exports.up = function(knex) {
 
     table.string('name');
     table.string('descricao');
-
-    //fk
-    table.string('product_id').notNullable();
-
-    table.foreign('product_id').references('cod').inTable('products')
   });
 };
 

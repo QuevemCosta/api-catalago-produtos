@@ -2,18 +2,29 @@ const express = require('express');
 
 const routes = express.Router();
 
+//Products Routes
 const ProductConttroler = require('./controller/ProductController')
 
 //list products
-routes.get('/?',ProductConttroler.index);
+routes.get('/produtct/?',ProductConttroler.index);
 //detales
-routes.get('/:id',ProductConttroler.show);
+routes.get('/produtct/:id',ProductConttroler.show);
 //create
-routes.post('/',ProductConttroler.create);
+routes.post('/produtct/',ProductConttroler.create);
 //update
-routes.put('/:id',ProductConttroler.update);
+routes.put('/produtct/:id',ProductConttroler.update);
 //delite
-routes.delete('/:id',ProductConttroler.destroy);
+routes.delete('/produtct/:id',ProductConttroler.destroy);
+
+
+//Routes Categories
+const CategoriesConttroler = require('./controller/CategoriesController');
+routes.get('/categories/?',CategoriesConttroler.index);
+
+routes.post('/categories/',CategoriesConttroler.create);
+
+
+
 
 module.exports=routes;
 
