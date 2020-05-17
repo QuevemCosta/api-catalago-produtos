@@ -1,9 +1,20 @@
 const crypto = require('crypto')
 const connect = require('../database/connect')
 
+ 
+const { attachPaginate } = require ( 'knex-paginate' ) ;     
+attachPaginate ( ) ;
+
 module.exports={
     async index(request,response){
-        const products = await connect('products').select('*');
+
+        const {page} = request.query
+
+        console.log(page)
+
+        const products = await connect('products').select('*')
+        .paginate({ perPage: 10, currentPage: page})
+        
         return response.json(products)
     },
 

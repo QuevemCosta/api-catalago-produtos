@@ -6,7 +6,7 @@ const routes = express.Router();
 const ProductConttroler = require('./controller/ProductController')
 
 //list products
-routes.get('/produtct/?',ProductConttroler.index);
+routes.get('/produtcts/?',ProductConttroler.index);
 //detales
 routes.get('/produtct/:id',ProductConttroler.show);
 //create
