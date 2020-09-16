@@ -10,5 +10,5 @@ app.use(cors())//definir de onde pode acessar o servidor
 app.use('/',require('./routes'))
 
 //
-app.listen(3333);
-console.log('servidor dodando na porta 3333')
+app.listen(3000);
+console.log('servidor dodando na porta 3000')
