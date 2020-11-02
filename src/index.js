@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors())//definir de onde pode acessar o servidor
+app.use(cors('*'))//definir de onde pode acessar o servidor
 app.use('/',require('./routes'))
 
 //
